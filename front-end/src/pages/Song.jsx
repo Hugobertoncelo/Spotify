@@ -1,12 +1,12 @@
-// import React from "react";
+import React from "react";
 import Player from "../components/Player";
 import { Link, useParams } from "react-router-dom";
-import { songsArray } from "../../assets/database/songs";
-import { artistArray } from "../../assets/database/artists";
+import { songsArray } from "../assets/database/songs";
+import { artistArray } from "../assets/database/artists";
 
 const Song = () => {
   const { id } = useParams();
-  // console.log(id)
+  // console.log(id);
 
   const { image, name, duration, artist, audio } = songsArray.filter(
     (currentSongObj) => currentSongObj.id === Number(id)
@@ -21,6 +21,7 @@ const Song = () => {
   const songsArrayFromArtist = songsArray.filter(
     (currentSongObj) => currentSongObj.artist === artist
   );
+  // console.log(songsArrayFromArtist);
 
   const randomIndex = Math.floor(
     Math.random() * (songsArrayFromArtist.length - 1)

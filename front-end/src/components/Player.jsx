@@ -1,4 +1,4 @@
-// import React from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCirclePlay,
@@ -19,6 +19,7 @@ const Player = ({ duration, randomIdFromArtist, randomId2FromArtist }) => {
           className="player__icon player__icon--play"
           icon={faCirclePlay}
         />
+
         <Link to={`/song/${randomId2FromArtist}`}>
           <FontAwesomeIcon className="player__icon" icon={faForwardStep} />
         </Link>
@@ -26,9 +27,11 @@ const Player = ({ duration, randomIdFromArtist, randomId2FromArtist }) => {
 
       <div className="player__progress">
         <p>00:00</p>
+
         <div className="player__bar">
           <div className="player__bar-progress"></div>
         </div>
+
         <p>{duration}</p>
       </div>
     </div>
