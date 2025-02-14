@@ -38,4 +38,3 @@ app.get("*", async (request, response) => {
 app.listen(PORT, () => {
   console.log(`Servidor está escutando na porta ${PORT}`);
 });
-

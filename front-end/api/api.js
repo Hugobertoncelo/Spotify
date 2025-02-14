@@ -1,8 +1,8 @@
 import axios from "axios";
-import "dotenv/config"
+// import "dotenv/config"
 
-const { NODE_ENV } = process.env;
-const URL = NODE_ENV === "development" ? "http://localhost:3000/api" : "/api";
+// const { NODE_ENV } = process.env;
+const URL =  import.meta.env.DEV ? "http://localhost:3000/api" : "/api";
 
 const responseArtists = await axios.get(`${URL}/artists`);
 const responseSongs = await axios.get(`${URL}/songs`);
